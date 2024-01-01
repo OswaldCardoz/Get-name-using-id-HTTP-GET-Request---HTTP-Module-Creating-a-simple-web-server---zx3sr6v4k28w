@@ -8,7 +8,7 @@ const productNames = JSON.parse(
 );
 
 //Middlewares
-app.use(express.json())
+app.use(express.json());
 
 // GET endpoint for sending the products to client by id
 //Endpoint - /api/v1/names/:id
@@ -19,7 +19,7 @@ app.get("/api/v1/names/:id", (req, res) => {
 });
   
   if (user.length !== 0) {
-		const resObj = {name: {...user[0]}}
+const resObj = {productName: {...user[0]}}
     res.status(200).send({
       status: "success",
       message: "Product name fetched successfully",
